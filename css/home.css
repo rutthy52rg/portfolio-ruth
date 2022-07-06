@@ -1,1 +1,166 @@
 @import url(main.css);
+
+/* ===============
+   HEADER
+   =============== */
+
+header h1 {
+  font: var(--font-big) var(--title-fonts);
+  padding: 5%;
+  color: var(--th8-suplementary-color);
+  width: 30%;
+  word-wrap: break-word;
+  margin-inline-end: 0px;
+  margin-left: 50%;
+}
+/* ===============
+   HOME NAV
+   =============== */
+.header-nav__menu-icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.header-nav__menu-icon:after {
+  width: 80px;
+  height: 80px;
+  left: 20px;
+  top: -40px;
+  position: absolute;
+  background-color: var(--th8-terciary-color);
+  border-radius: 50%;
+  content: "\2630";
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 14px 1px rgb(255 105 92 / 46%);
+}
+.header-nav__menu-icon:checked:after {
+  animation: iconmenutobottom 2s 1;
+}
+@keyframes iconmenutobottom {
+  0% {
+    top: 0px;
+    content: "\2630";
+  }
+  10% {
+    top: 75vh;
+    content: "\2715";
+  }
+  90% {
+    top: 75vh;
+    content: "\2715";
+  }
+  100% {
+    top: 0px;
+    content: "\2630";
+  }
+}
+
+.header-nav__menu-icon + ul {
+  width: 100vw;
+  background: var(--th8-secondary-color);
+  margin-top: -160px;
+  padding-top: 80px;
+  height: 0vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-nav__menu-icon:checked + ul {
+  animation: openmenu 2s 1;
+}
+@keyframes openmenu {
+  0% {
+    height: 0px;
+  }
+  10% {
+    height: 90vh;
+  }
+  90% {
+    height: 90vh;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+.header-nav__menu-icon + ul > li {
+  visibility: hidden;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--th8-suplementary-color);
+  font: lighter var(--font-medium) var(--content-fonts);
+}
+.header-nav__menu-icon:checked + ul > li {
+  animation: visiblelinks 1.8s 1;
+}
+
+@keyframes visiblelinks {
+  0% {
+    visibility: hidden;
+  }
+  10% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+li:nth-child(2) {
+  color: white;
+}
+
+.header-nav_avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.header-nav_name {
+  font: var(--font-small) var(--title-fonts);
+  color: var(--th8-suplementary-color);
+}
+
+/* ===============
+   SLIDER
+   =============== */
+.main__slider img {
+  width: 100%;
+}
+
+/* ===============
+   CAROUSEL PROJECTS
+   =============== */
+
+/* ===============
+   SKILLS
+   =============== */
+
+/* ===============
+   FORM
+   =============== */
+
+@media screen and (min-width: 768px) {
+  header h1 {
+    font: var(--font-super-bigger) var(--title-fonts);
+    width: 30%;
+  }
+  .header-nav_avatar img {
+    width: 30%;
+    height: 30%;
+  }
+  .header-nav_name {
+    font: var(--font-medium) var(--title-fonts);
+  }
+
+  .header-nav__menu-icon + ul > li {
+    font: lighter var(--font-big) var(--content-fonts);
+  }
+}
