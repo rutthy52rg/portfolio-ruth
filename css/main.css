@@ -76,10 +76,11 @@
   /* ===sizes=== */
 
   --font-smaller: 1em;
-  --font-small: 1.5em;
+  --font-small: 1.3em;
   --font-medium: 2em;
   --font-big: 3em;
   --font-bigger: 4em;
+  --font-super-bigger: 5em;
 }
 
 /* ===============
@@ -92,6 +93,7 @@ input {
 body,
 p,
 ol,
+ul,
 li,
 div,
 span,
@@ -106,7 +108,13 @@ footer,
 header,
 menu,
 nav,
-section {
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -127,19 +135,42 @@ ol,
 ul {
   list-style: none;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===============
+   GENERAL
+   =============== */
 
 body {
-  font: var(--font-small) var(--content-fonts);
   background-color: var(--th8-suplementary-color);
+}
+
+hr.line-separator {
+  width: 50%;
+  border: 2px solid var(--th8-terciary-color);
 }
 
 /* ===============
    HEADER
    =============== */
+header {
+  height: 80px;
+  text-align: right;
+  position: fixed;
+  z-index: 1;
+}
 
 /* ===============
    NAV
    =============== */
+.header-nav {
+  position: fixed;
+  width: 100vw;
+  top: 80px;
+}
 
 /* ===============
    MAIN

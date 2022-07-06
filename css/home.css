@@ -4,11 +4,14 @@
    HEADER
    =============== */
 
+header {
+  width: 60vw;
+  right: 20px;
+}
 header h1 {
-  font: var(--font-big) var(--title-fonts);
-  padding: 5%;
-  color: var(--th8-suplementary-color);
-  width: 30%;
+  font: bolder var(--font-big) var(--title-fonts);
+  padding: 2%;
+  color: var(--th8-primary-color);
   word-wrap: break-word;
   margin-inline-end: 0px;
   margin-left: 50%;
@@ -25,7 +28,7 @@ header h1 {
   width: 80px;
   height: 80px;
   left: 20px;
-  top: -40px;
+  top: -50px;
   position: absolute;
   background-color: var(--th8-terciary-color);
   border-radius: 50%;
@@ -37,7 +40,7 @@ header h1 {
   box-shadow: 0px 0px 14px 1px rgb(255 105 92 / 46%);
 }
 .header-nav__menu-icon:checked:after {
-  animation: iconmenutobottom 2s 1;
+  animation: iconmenutobottom 1.5s 1;
 }
 @keyframes iconmenutobottom {
   0% {
@@ -45,15 +48,15 @@ header h1 {
     content: "\2630";
   }
   10% {
-    top: 75vh;
+    top: 80vh;
     content: "\2715";
   }
   90% {
-    top: 75vh;
+    top: 80vh;
     content: "\2715";
   }
   100% {
-    top: 0px;
+    top: 80px;
     content: "\2630";
   }
 }
@@ -70,17 +73,17 @@ header h1 {
   align-items: center;
 }
 .header-nav__menu-icon:checked + ul {
-  animation: openmenu 2s 1;
+  animation: openmenu 1.5s 1;
 }
 @keyframes openmenu {
   0% {
     height: 0px;
   }
   10% {
-    height: 90vh;
+    height: 92vh;
   }
   90% {
-    height: 90vh;
+    height: 92vh;
   }
   100% {
     height: 0px;
@@ -96,7 +99,7 @@ header h1 {
   font: lighter var(--font-medium) var(--content-fonts);
 }
 .header-nav__menu-icon:checked + ul > li {
-  animation: visiblelinks 1.8s 1;
+  animation: visiblelinks 1.3s 1;
 }
 
 @keyframes visiblelinks {
@@ -149,12 +152,11 @@ li:nth-child(2) {
 
 @media screen and (min-width: 768px) {
   header h1 {
-    font: var(--font-super-bigger) var(--title-fonts);
-    width: 30%;
+    font: bolder var(--font-super-bigger) var(--title-fonts);
   }
   .header-nav_avatar img {
-    width: 30%;
-    height: 30%;
+    width: 250px;
+    height: auto;
   }
   .header-nav_name {
     font: var(--font-medium) var(--title-fonts);

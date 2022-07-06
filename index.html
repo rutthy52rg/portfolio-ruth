@@ -20,17 +20,49 @@
     <nav class="header-nav">
       <input type="checkbox" class="header-nav__menu-icon" />
       <ul class="header-nav__list">
-        <li class="header-nav__list_item">projects</li>
-        <li class="header-nav__list_item">skills</li>
-        <li class="header-nav__list_item">contact</li>
+        <li class="header-nav_avatar">
+          <picture>
+            <img
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              srcset="
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_200.jpg 200w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_424.jpg 424w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_596.jpg 596w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_710.jpg 710w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_1200.jpg 1200w
+              "
+              src="/img/ruth-gonzalez-photo_voiwi8_c_scale,w_1200.jpg"
+              alt=""
+            />
+          </picture>
+          <h2 class="header-nav_name">Ruth González</h2>
+          <hr class="line-separator" />
+        </li>
+        <li class="header-nav__list_item">
+          <a href="#our-projects">projects</a>
+        </li>
+        <li class="header-nav__list_item"><a href="#skills">skills</a></li>
+        <li class="header-nav__list_item"><a href="#contact">contact</a></li>
       </ul>
     </nav>
     <main class="main">
       <section class="main__slider">
-        <figcaption></figcaption>
+          <img
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            srcset="
+              /img/header_hq6gyn_c_scale,w_200.png 200w,
+              /img/header_hq6gyn_c_scale,w_437.png 437w,
+              /img/header_hq6gyn_c_scale,w_607.png 607w,
+              /img/header_hq6gyn_c_scale,w_763.png 763w,
+              /img/header_hq6gyn_c_scale,w_1200.png 1200w
+            "
+            src="/img/header_hq6gyn_c_scale,w_1200.png"
+            alt=""
+          />
+        </picture>
         <aside><a href="" class="btn">contact with us</a></aside>
       </section>
-      <section class="main__projects">
+      <section class="main__projects" id="our-projects">
         <h2 class="main__projects_title">our projects</h2>
         <article class="main__projects_carousel">
           <div class="main__projects_carousel_items">
@@ -51,7 +83,7 @@
           </ul>
         </article>
       </section>
-      <section class="main__skills">
+      <section class="main__skills" id="skills">
         <h2 clas="main__skills_title">skills</h2>
         <article class="main__skills_item">skill</article>
         <article class="main__skills_item">skill</article>
@@ -59,7 +91,7 @@
         <article class="main__skills_item">skill</article>
         <article class="main__skills_item">skill</article>
       </section>
-      <section class="main__contact-form">
+      <section class="main__contact-form" id="contact">
         <h2 clas="main__contact-form_title">contact form</h2>
         <form action=""></form>
       </section>
