@@ -2,7 +2,7 @@
    GLOBAL SETTINGS 
    =============== */
 :root {
-  --grey: ##f5f5f5;
+  --grey: ##f2f2f2;
   --black: #282828;
   --white: #ffffff;
 
@@ -63,10 +63,12 @@
 
   /* ===theme 8 - colors=== */
   --th8-base-color: #2d1e45;
-  --th8-primary-color: #612a51;
+  --th8-primary-color: #511b5c;
+  /*--th8-primary-color: #612a51;*/
   --th8-secondary-color: #ba3259;
   --th8-terciary-color: #ff695c;
-  --th8-suplementary-color: #ccbca1;
+  /*--th8-suplementary-color: #ccbca1;*/
+  --th8-suplementary-color: #ffcb70;
 
   /* ===fonts=== */
   --title-fonts: "Playfair Display", serif;
@@ -118,6 +120,7 @@ h6 {
   padding: 0;
   margin: 0;
 }
+
 /* ===HTML5 display-role reset for older browsers=== */
 article,
 aside,
@@ -145,12 +148,32 @@ a {
    =============== */
 
 body {
-  background-color: var(--th8-suplementary-color);
+  background-color: var(--th8-primary-color);
 }
 
 hr.line-separator {
   width: 50%;
   border: 2px solid var(--th8-terciary-color);
+}
+.btn {
+  padding: 20px;
+}
+h2[class$="_title"] {
+  font: lighter var(--font-medium) var(--title-fonts);
+  text-align: center;
+  margin: 1em auto;
+  position: relative;
+  color: var(--th8-suplementary-color);
+  width: max-content;
+}
+h2[class$="_title"]:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  background-color: var(--th8-terciary-color);
+  height: 0.1em;
+  bottom: 0;
+  z-index: -1;
 }
 
 /* ===============
@@ -159,15 +182,15 @@ hr.line-separator {
 header {
   height: 80px;
   text-align: right;
-  position: fixed;
-  z-index: 1;
+  position: absolute;
+  z-index: 2;
 }
 
 /* ===============
    NAV
    =============== */
 .header-nav {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   top: 80px;
 }
@@ -179,3 +202,10 @@ header {
 /* ===============
    FOOTER
    =============== */
+
+@media screen and (min-width: 768px) {
+  h2[class$="_title"] {
+    font: bold var(--font-bigger) var(--title-fonts);
+    margin: 1.5em 0;
+  }
+}
