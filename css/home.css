@@ -64,7 +64,7 @@ header h1 {
 
 .header-nav__menu-icon + ul {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
   background-color: var(--th8-grey-color);
   margin-top: -160px;
@@ -181,7 +181,7 @@ section.main__slider {
   content: "";
   position: absolute;
   width: 100vw;
-  height: 20vh;
+  height: 180px;
   background-color: var(--th8-purple-dark-color);
   top: 20px;
   z-index: -1;
@@ -189,7 +189,7 @@ section.main__slider {
 }
 .main__projects_carousel_list {
   width: 100%;
-  height: 20vh;
+  height: 190px;
   overflow: hidden;
   scroll-behavior: smooth;
   display: flex;
@@ -199,7 +199,7 @@ section.main__slider {
 
 .main__projects_carousel_list_item {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -210,7 +210,6 @@ section.main__slider {
   width: 10%;
   height: 75%;
   left: 20%;
-  bottom: -10%;
   position: absolute;
   color: var(--white);
   font: var(--font-small) / 0em;
@@ -219,7 +218,6 @@ section.main__slider {
   width: 100%;
   height: 10%;
   left: 0;
-  bottom: 10%;
   position: absolute;
   color: var(--th8-purple-dark-color);
   font-size: var(--font-smaller);
@@ -276,8 +274,7 @@ a.main__projects_carousel_dots-list_item {
   justify-content: flex-end;
   width: 45%;
   margin: 2%;
-  max-height: 30vh;
-  min-height: 20vh;
+  height: 250px;
   text-align: center;
   box-sizing: border-box;
   position: relative;
@@ -287,55 +284,56 @@ a.main__projects_carousel_dots-list_item {
   position: absolute;
   z-index: -2;
   background-color: var(--th8-purple-dark-color);
-  width: 90%;
-  top: 15%;
-  bottom: 5%;
-  right: -3%;
+  width: 95%;
+  top: 15px;
+  bottom: 10px;
+  right: -5px;
 }
 .main__skills_list_item p {
   position: relative;
   background-color: var(--th8-pink-dark-color);
-  padding-left: 20px;
   width: 75%;
+  height: 40px;
+  padding-left: 20px;
   color: var(--white);
   font: var(--font-small) / 2em var(--content-fonts);
   text-align: left;
 }
 .main__skills_list_item p:after {
   content: "";
-  width: 15%;
-  right: 15%;
-  padding: 10% 0 20% 10%;
+  width: 20px;
+  right: 10px;
   position: absolute;
-  bottom: -1em;
+  padding-top: 10px;
+  bottom: -10px;
   z-index: -1;
   font: var(--font-super-smaller) var(--content-fonts);
 }
 
 .main__skills_list_item p.git:after {
   content: "30%";
-  height: 6.5vh;
+  height: 80px;
   background-color: var(--th8-pink-medium-color);
   animation: git 2s linear 1;
 }
 
 .main__skills_list_item p.html:after {
   content: "85%";
-  height: 14vh;
+  height: 185px;
   background-color: var(--th8-orange-color);
   animation: html 2s linear 1;
 }
 
 .main__skills_list_item p.css:after {
   content: "75%";
-  height: 13vh;
+  height: 170px;
   background-color: var(--th8-orange-color);
   animation: css 2s linear 1;
 }
 
 .main__skills_list_item p.js:after {
   content: "20%";
-  height: 6vh;
+  height: 70px;
   background-color: var(--th8-pink-medium-color);
   animation: js 2s linear 1;
 }
@@ -345,7 +343,7 @@ a.main__projects_carousel_dots-list_item {
     height: 0;
   }
   100% {
-    height: 6.5vh;
+    height: 80px;
   }
 }
 @keyframes html {
@@ -353,7 +351,7 @@ a.main__projects_carousel_dots-list_item {
     height: 0;
   }
   100% {
-    height: 14vh;
+    height: 185px;
   }
 }
 @keyframes css {
@@ -361,7 +359,7 @@ a.main__projects_carousel_dots-list_item {
     height: 0;
   }
   100% {
-    height: 13vh;
+    height: 170px;
   }
 }
 @keyframes js {
@@ -369,7 +367,7 @@ a.main__projects_carousel_dots-list_item {
     height: 0;
   }
   100% {
-    height: 6vh;
+    height: 70px;
   }
 }
 
@@ -385,19 +383,18 @@ a.main__projects_carousel_dots-list_item {
   align-items: flex-end;
   margin-top: 3rem;
 }
-.main__contact-form .main__contact-form_subtittle {
-  color: var(--th8-purple-medium-color);
-  font: var(--font-medium-small) var(--content-fonts);
-}
-.main__contact-form form > div {
-  margin-bottom: 15%;
-  width: calc(100% - 10%);
-}
-f.main__contact-form orm > div:nth-child(-n + 4) {
-  width: calc(90% / 2);
-  margin-right: 5%;
+
+.main__contact-form form > div:not(.radio-input) {
+  margin: 0 10px 40px 0;
+  width: 90%;
 }
 
+.main__contact-form form div:nth-child(1),
+.main__contact-form form div:nth-child(2),
+.main__contact-form form div:nth-child(3),
+.main__contact-form form div:nth-child(4) {
+  width: calc(90% / 2);
+}
 .main__contact-form form > div > button {
   background-color: var(--th8-pink-extra-light-color);
   font: bolder var(--font-small) var(--content-fonts);

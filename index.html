@@ -130,7 +130,6 @@
       </section>
       <section class="main__contact-form" id="contact">
         <h2 class="main__contact-form_title">contact form</h2>
-        <h3 class="main__contact-form_subtittle">Contact with us</h3>
         <form action="/register">
           <div>
             <label for="name"></label>
@@ -153,6 +152,16 @@
             />
           </div>
           <div>
+            <label for="email"></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
             <label for="phone"></label>
             <input
               type="tel"
@@ -163,14 +172,40 @@
             />
           </div>
           <div>
-            <label for="email"></label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
+            <div class="radio-input">
+              <label for="Universidad">Universidad </label>
+              <input
+                type="radio"
+                name="known"
+                id="Universidad"
+                value="Universidad"
+              />
+              <i></i>
+            </div>
+            <div class="radio-input">
+              <label for="event">Keepcoding</label>
+              <input
+                type="radio"
+                name="known"
+                id="Keepcoding"
+                value="Keepcoding"
+              />
+              <i></i>
+            </div>
+            <div class="radio-input">
+              <label for="known">Colegio</label>
+              <input
+                type="radio"
+                name="known"
+                id="Colegio"
+                value="Colegio"
+              /><i></i>
+            </div>
+            <div class="radio-input">
+              <label for="message">En Github</label>
+              <input type="radio" name="known" id="Github" value="Github" />
+              <i></i>
+            </div>
           </div>
           <div>
             <label for="twitter"></label>

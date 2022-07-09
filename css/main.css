@@ -96,6 +96,9 @@ input,
 textarea,
 button {
   all: unset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 body,
@@ -158,7 +161,7 @@ body {
 }
 section[class^="main__"] {
   width: 90vw;
-  margin: 5rem auto 0;
+  margin: 5% auto 0;
 }
 hr.line-separator {
   width: 50%;
@@ -184,13 +187,76 @@ h2[class$="_title"]:after {
   bottom: 0;
   z-index: -1;
 }
+/* ======== inputs ========= */
 input,
 textarea {
   all: unset;
   width: 100%;
   border-bottom: 3px solid var(--th8-purple-medium-color);
-  font: var(--font-small) / 1em var(--content-fonts);
 }
+
+label,
+input::placeholder,
+textarea::placeholder {
+  font: var(--font-small) / 1em var(--content-fonts);
+  color: var(--th8-purple-medium-color);
+}
+.radio-input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 2px 0 0px 30px;
+  display: block;
+}
+.radio-input input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+}
+
+input[type="radio"] {
+  padding: 5px 0 5px 60px;
+}
+input[type="radio"]:after {
+  content: "";
+  display: block;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 4px;
+  left: 4px;
+  background-color: var(--th8-purple-medium-color);
+  transition: all 0.25s ease;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.radio-input input + i {
+  background: var(--th8-grey-color);
+  border: 2px solid var(--th8-purple-medium-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.radio-input input[type="radio"] + i {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.radio-input input[type="radio"]:checked + i:before {
+  transform: scale(1);
+  opacity: 1;
+}
+.radio-input:hover input[type="radio"]:not(:checked) + i {
+  background-color: var(--th8-purple-medium-color);
+}
+
 /* ===============
    HEADER
    =============== */
