@@ -25,10 +25,10 @@
             <img
               sizes="(max-width: 1200px) 100vw, 1200px"
               srcset="
-                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_200.jpg 200w,
-                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_424.jpg 424w,
-                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_596.jpg 596w,
-                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_710.jpg 710w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_200.jpg   200w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_424.jpg   424w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_596.jpg   596w,
+                /img/ruth-gonzalez-photo_voiwi8_c_scale,w_710.jpg   710w,
                 /img/ruth-gonzalez-photo_voiwi8_c_scale,w_1200.jpg 1200w
               "
               src="/img/ruth-gonzalez-photo_voiwi8_c_scale,w_1200.jpg"
@@ -71,16 +71,28 @@
         <article class="main__projects_carousel">
           <div class="main__projects_carousel_list">
             <div id="project1" class="main__projects_carousel_list_item">
-              <img src="/img/rfaf.png" alt="Project1" />
-              <figcaption>Project1</figcaption>
+              <p class="figure-vertical">
+                ______ <br />
+                _________
+              </p>
+              <p class="figure-horizontal">________</p>
+              <figcaption>UX Designer</figcaption>
             </div>
             <div id="project2" class="main__projects_carousel_list_item">
-              <img src="img/cerfef-1.png" alt="Project2" />
-              <figcaption>Project2</figcaption>
+              <p class="figure-vertical">
+                ______ <br />
+                _________
+              </p>
+              <p class="figure-horizontal">________</p>
+              <figcaption>Front Developer</figcaption>
             </div>
             <div id="project3" class="main__projects_carousel_list_item">
-              <img src="/img/rfaf.png" alt="Project3" />
-              <figcaption>Project3</figcaption>
+              <p class="figure-vertical">
+                ______ <br />
+                _________
+              </p>
+              <p class="figure-horizontal">________</p>
+              <figcaption>Tech Leader</figcaption>
             </div>
           </div>
           <div class="main__projects_carousel_dots-list">
@@ -101,15 +113,90 @@
       </section>
       <section class="main__skills" id="skills">
         <h2 class="main__skills_title">skills</h2>
-        <article class="main__skills_item">skill</article>
-        <article class="main__skills_item">skill</article>
-        <article class="main__skills_item">skill</article>
-        <article class="main__skills_item">skill</article>
-        <article class="main__skills_item">skill</article>
+        <div class="main__skills_list">
+          <article class="main__skills_list_item">
+            <p class="git">GIT</p>
+          </article>
+          <article class="main__skills_list_item">
+            <p class="html">HTML</p>
+          </article>
+          <article class="main__skills_list_item">
+            <p class="css">CSS</p>
+          </article>
+          <article class="main__skills_list_item">
+            <p class="js">JS</p>
+          </article>
+        </div>
       </section>
       <section class="main__contact-form" id="contact">
         <h2 class="main__contact-form_title">contact form</h2>
-        <form action=""></form>
+        <h3 class="main__contact-form_subtittle">Contact with us</h3>
+        <form action="/register">
+          <div>
+            <label for="name"></label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div>
+            <label for="surname"></label>
+            <input
+              type="text"
+              name="surname"
+              id="name"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone"></label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              required
+            />
+          </div>
+          <div>
+            <label for="email"></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div>
+            <label for="twitter"></label>
+            <input
+              type="text"
+              name="gittag"
+              id="gittag"
+              pattern="^@[^\s]+"
+              required
+              placeholder="GitHub Tag"
+            />
+          </div>
+          <div>
+            <label for="description"></label>
+            <textarea
+              name="description"
+              id="description"
+              maxlength="180"
+              required
+              placeholder="Description"
+            ></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="footer">

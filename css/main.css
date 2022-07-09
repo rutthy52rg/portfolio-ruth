@@ -62,13 +62,16 @@
   --th7-base-color: #3f2928;
 
   /* ===theme 8 - colors=== */
-  --th8-base-color: #2d1e45;
-  --th8-primary-color: #511b5c;
-  /*--th8-primary-color: #612a51;*/
-  --th8-secondary-color: #ba3259;
-  --th8-terciary-color: #ff695c;
-  /*--th8-suplementary-color: #ccbca1;*/
-  --th8-suplementary-color: #ffcb70;
+  --th8-purple-dark-color: #2d1e45;
+  --th8-purple-medium-color: #511b5c;
+  --th8-purple-medium-light-color: #612a51;
+  --th8-pink-extra-light-color: #ff695c;
+  --th8-beige-color: #ccbca1;
+  --th8-yellow-light-color: #ffcb70;
+  --th8-pink-medium-color: #c92b55;
+  --th8-pink-dark-color: #8b1c58;
+  --th8-orange-color: #f88b30;
+  --th8-grey-color: #f2f2f2;
 
   /* ===fonts=== */
   --title-fonts: "Playfair Display", serif;
@@ -76,10 +79,11 @@
   --content-fonts: "Tajawal", sans-serif;
 
   /* ===sizes=== */
-
+  --font-super-smaller: 0.8em;
   --font-smaller: 1em;
   --font-small: 1.3em;
-  --font-medium: 2em;
+  --font-medium-small: 2em;
+  --font-medium: 2.7em;
   --font-big: 3em;
   --font-bigger: 4em;
   --font-super-bigger: 5em;
@@ -88,7 +92,9 @@
 /* ===============
    RESETS
    =============== */
-input {
+input,
+textarea,
+button {
   all: unset;
 }
 
@@ -148,34 +154,43 @@ a {
    =============== */
 
 body {
-  background-color: var(--th8-primary-color);
+  background-color: var(--th8-grey-color);
 }
-
+section[class^="main__"] {
+  width: 90vw;
+  margin: 5rem auto 0;
+}
 hr.line-separator {
   width: 50%;
-  border: 2px solid var(--th8-terciary-color);
+  border: 2px solid var(--th8-pink-extra-light-color);
 }
 .btn {
   padding: 20px;
 }
 h2[class$="_title"] {
-  font: lighter var(--font-medium) var(--title-fonts);
+  font: var(--font-medium) var(--title-fonts);
   text-align: center;
   margin: 1em auto;
   position: relative;
-  color: var(--th8-suplementary-color);
+  color: var(--th8-purple-medium-color);
   width: max-content;
 }
 h2[class$="_title"]:after {
   content: "";
   position: absolute;
   width: 20px;
-  background-color: var(--th8-terciary-color);
+  background-color: var(--th8-pink-extra-light-color);
   height: 0.1em;
   bottom: 0;
   z-index: -1;
 }
-
+input,
+textarea {
+  all: unset;
+  width: 100%;
+  border-bottom: 3px solid var(--th8-purple-medium-color);
+  font: var(--font-small) / 1em var(--content-fonts);
+}
 /* ===============
    HEADER
    =============== */
@@ -205,7 +220,7 @@ header {
 
 @media screen and (min-width: 768px) {
   h2[class$="_title"] {
-    font: bold var(--font-bigger) var(--title-fonts);
+    font: bold var(--font-super-bigger) var(--title-fonts);
     margin: 1.5em 0;
   }
 }
