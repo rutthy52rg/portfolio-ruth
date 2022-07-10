@@ -20,26 +20,25 @@
 
 |------app
 
-|------|-----css
+       |-----css
 
-|      	      |---main.css
+          |---main.css
 
-|             |---home.css
+          |---home.css
 
-|	      |---our-projects.css
+          |---our-projects.css
 
-|      |----img
+       |----img
 
-|            |---iconos
+          |---iconos
 
-|      |----videos
+       |----videos
 
-|      |----home.html
+       |----home.html
 
-|      |----our-projects.html
+       |----our-projects.html
 
-|      |----Readme.md
+       |----Readme.md
 
-|      |----.gitignore
+       |----.gitignore
 
-|_
