@@ -27,7 +27,7 @@ header h1 {
 }
 .header-nav__menu-icon:after {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 50px;
   height: 50px;
   left: 20px;
@@ -49,15 +49,15 @@ header h1 {
     content: "\2630";
   }
   10% {
-    top: 80vh;
+    top: 70vh;
     content: "\2715";
   }
   90% {
-    top: 80vh;
+    top: 70vh;
     content: "\2715";
   }
   100% {
-    top: 80px;
+    top: 70px;
     content: "\2630";
   }
 }
@@ -85,15 +85,15 @@ header h1 {
     box-shadow: none;
   }
   10% {
-    height: 92vh;
+    height: 90vh;
     box-shadow: 1px 1px 50px 0px var(--th8-purple-dark-color);
   }
   90% {
-    height: 92vh;
+    height: 90vh;
     box-shadow: 1px 1px 50px 0px var(--th8-purple-dark-color);
   }
   100% {
-    height: 0px;
+    height: 90px;
     box-shadow: none;
   }
 }
@@ -155,8 +155,13 @@ section.main__slider {
 .main__slider img {
   width: 100%;
 }
+.main__slider_contact-form{
+  position: fixed;
+  z-index: 1;
+}
 .main__slider_contact-form .btn {
   padding: 0;
+
 }
 .main__slider_contact-form .btn::after {
   content: "\2709";
@@ -221,6 +226,7 @@ section.main__slider {
   position: absolute;
   color: var(--th8-purple-dark-color);
   font-size: var(--font-smaller);
+  bottom: 25px;
 }
 .main__projects_carousel_list_item:nth-child(odd) p.figure-vertical {
   background: var(--th8-pink-medium-color);
@@ -385,7 +391,7 @@ a.main__projects_carousel_dots-list_item {
 }
 
 .main__contact-form form > div:not(.radio-input) {
-  margin: 0 10px 40px 0;
+  margin: 0 20px 40px 0;
   width: 90%;
 }
 
@@ -393,7 +399,7 @@ a.main__projects_carousel_dots-list_item {
 .main__contact-form form div:nth-child(2),
 .main__contact-form form div:nth-child(3),
 .main__contact-form form div:nth-child(4) {
-  width: calc(90% / 2);
+  width: calc(85% / 2);
 }
 .main__contact-form form > div > button {
   background-color: var(--th8-pink-extra-light-color);
