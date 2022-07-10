@@ -183,7 +183,7 @@ hr.line-separator {
 
 /* ======== titles ========= */
 h2[class$="_title"] {
-  font: var(--font-medium) var(--title-fonts);
+  font: bold var(--font-medium-small) var(--title-fonts);
   text-align: center;
   margin: 1em auto;
   position: relative;
@@ -305,6 +305,7 @@ header {
   min-height: 5vh;
   width: 100vw;
   padding: 10px 0;
+  font: var(--font-smaller) var(--content-fonts)
 }
 .footer__nav_list {
   display: flex;
@@ -318,6 +319,7 @@ header {
   height: 30px;
   filter: invert(1);
 }
+
 
 /* ===============
    RESPONSIVE -MEDIAS QUERIES
@@ -352,4 +354,10 @@ header {
   .form-control + .form-control {
     margin-top: 0;
   }
+}
+@media screen and (min-width: 1024px) {
+  
+}
+@media screen and (min-width: 1400px) {
+
 }

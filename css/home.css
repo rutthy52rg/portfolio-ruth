@@ -27,7 +27,7 @@ header h1 {
 }
 .header-nav__menu-icon:after {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 50px;
   height: 50px;
   left: 20px;
@@ -64,7 +64,7 @@ header h1 {
 
 .header-nav__menu-icon + ul {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100vw;
   background-color: var(--th8-grey-color);
   margin-top: -160px;
@@ -145,7 +145,7 @@ li:nth-child(2) {
    =============== */
 section.main__slider {
   overflow: hidden;
-  max-height: 100vh;
+  max-height: 600px;
   width: 100vw;
   margin-top: 0;
 }
@@ -425,13 +425,18 @@ a.main__projects_carousel_dots-list_item {
    RESPONSIVE
    =============== */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   /* =============== HEADER =============== */
   header h1 {
     font: bolder var(--font-super-bigger) var(--title-fonts);
   }
 
   /* =============== NAV =============== */
+
+  .header-nav__menu-icon:after {
+    width: 75px;
+    height: 75px;
+  }
   .header-nav_avatar img {
     width: 250px;
     height: auto;
@@ -440,23 +445,17 @@ a.main__projects_carousel_dots-list_item {
     font: var(--font-medium) var(--title-fonts);
   }
 
-  .header-nav__menu-icon + ul > li {
-    font: lighter var(--font-medium-small) var(--content-fonts);
-  }
   .header-nav__menu-icon + ul > li a:hover {
     color: var(--th8-orange-color);
   }
 
   /* =============== SLIDER =============== */
-  section.main__slider {
-    min-height: 600px;
+
+  .main__slider_contact-form .btn::after {
+    font-size: 4em;
+    padding: 5px 20px;
   }
 
-  .main__slider_contact-form .btn:hover::after {
-    padding-right: 200px;
-    transition: padding-right 0.2s linear;
-    content: "\2709 contact width us";
-  }
 
   /* =============== CAROUSEL =============== */
   .main__projects_carousel_list,
@@ -507,5 +506,15 @@ a.main__projects_carousel_dots-list_item {
   .main__contact-form form .main__contact-form_text {
     font: var(--font-small) var(--content-fonts);
   }
+}
+@media screen and (min-width: 1024px) {
+  section.main__slider {
+    max-height: 50vh;
+  }
+  section.main__slider img {
+    margin-top: -25%;
+  }
+}
 
+@media screen and (min-width: 1400px) {
 }
