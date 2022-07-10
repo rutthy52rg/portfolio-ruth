@@ -205,6 +205,10 @@ p[class$="_text"] {
   color: var(--th8-purple-medium-color);
 }
 /* ======== forms-inputs-buttons ========= */
+.btn {
+  padding: 20px;
+}
+
 input:not([type="radio"]),
 textarea {
   border-bottom: 3px solid var(--th8-purple-medium-color);
@@ -214,7 +218,7 @@ input,
 textarea,
 input::placeholder,
 textarea::placeholder {
-  font: var(--font-smaller) / 1em var(--content-fonts);
+  font: var(--font-smaller) var(--content-fonts);
   color: var(--th8-purple-medium-color);
   width: 100%;
 }
@@ -228,16 +232,15 @@ textarea::placeholder {
   color: var(--th8-purple-medium-color);
   display: grid;
   grid-template-columns: 2em auto;
-  gap: 0.5em;
 }
 input[type="radio"] {
   appearance: none;
   margin: 0;
   font: inherit;
-  color: var(--th8-purple-dark-color);
+  color: var(--th8-purple-medium-color);
   width: 1em;
   height: 1em;
-  border: 2px solid var(--th8-purple-dark-color);
+  border: 2px solid var(--th8-purple-medium-color);
   border-radius: 50%;
   transform: translateY(-0.075em);
   display: grid;
@@ -261,15 +264,13 @@ input[type="radio"]:checked::before {
   margin-top: 1em;
 }
 input[type="radio"]:focus {
-  outline: 0px solid var(--th8-purple-dark-color);
+  outline: 0px solid var(--th8-purple-medium-color);
   outline-offset: 0px;
 }
 form-control:focus-within {
   color: var(--form-control-color);
 }
-.btn {
-  padding: 20px;
-}
+
 /* ===============
    HEADER
    =============== */
@@ -325,5 +326,9 @@ header {
   }
   h2[class$="_title"] {
     font: bold var(--font-super-bigger) var(--title-fonts);
+  }
+  .btn:hover{
+    background-color: var(--th8-pink-dark-color);
+    color: var(--white);
   }
 }
