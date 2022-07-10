@@ -1,4 +1,4 @@
-*Práctica HTML Y CSS Bootcamp WEB13*
+
 
 *Ruth González Estévez*
 
@@ -41,4 +41,5 @@
        |----Readme.md
 
        |----.gitignore
+
 
