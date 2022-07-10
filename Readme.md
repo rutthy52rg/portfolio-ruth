@@ -19,15 +19,27 @@
 
 
 |------app
+
 |------|-----css
+
 |      	      |---main.css
+
 |             |---home.css
+
 |	      |---our-projects.css
+
 |      |----img
+
 |            |---iconos
+
 |      |----videos
+
 |      |----home.html
+
 |      |----our-projects.html
+
 |      |----Readme.md
+
 |      |----.gitignore
+
 |_
