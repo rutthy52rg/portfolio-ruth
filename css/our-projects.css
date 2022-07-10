@@ -16,7 +16,7 @@ header {
   font: var(--font-smaller) var(--content-fonts);
 }
 header a::after {
-  content: "\140A";
+  content: "\276E";
   color: var(--th8-pink-extra-light-color);
   font-size: var(--font-medium-small);
 }
@@ -26,8 +26,10 @@ header a::after {
    =============== */
 section.main__video {
   width: 100vw;
+  height: 180px;
   margin: 80px 0 0;
   position: relative;
+  overflow: hidden;
 }
 section.main__video .video_iframe-content {
   position: relative;
@@ -49,8 +51,66 @@ section.main__video video {
   top: 0;
   left: 0;
   width: 100%;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
 /* ===============
    GRID PROJECTS
    =============== */
+.main__projects-grid_list {
+  width: calc(100vw - 9vw);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+}
+
+.main__projects-grid_list_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.main__projects-grid_list_item img {
+  width: 100%;
+}
+.main__projects-grid_list_item figcaption {
+    color: var(--th8-purple-dark-color);
+    font: bold var(--font-smaller) var(--content-fonts);
+    text-align: center;
+}
+
+/* ===============
+   MEDIAS QUERIES
+   =============== */
+@media screen and (min-width: 678px) {
+  /* ===============
+   HEADER
+   =============== */
+
+   
+  /* ===============
+   VIDEO
+   =============== */
+  section.main__video {
+    height: 400px;
+  }
+
+
+  /* ===============
+   GRID PROJECTS
+   =============== */
+  .main__projects-grid_list_item figcaption {
+    background-color: #d6163d9c;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}

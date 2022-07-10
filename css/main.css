@@ -68,6 +68,8 @@
   --th8-pink-extra-light-color: #ff695c;
   --th8-beige-color: #ccbca1;
   --th8-yellow-light-color: #ffcb70;
+  --th8-yellow-medium-color: #ffc500;
+  --th8-pink-light-color:#d6163d;
   --th8-pink-medium-color: #c92b55;
   --th8-pink-dark-color: #8b1c58;
   --th8-orange-color: #f88b30;
@@ -310,9 +312,9 @@ header {
 }
 
 /* ===============
-   MEDIAS QUERIES
+   RESPONSIVE -MEDIAS QUERIES
    =============== */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 678px) {
   h2[class$="_title"] {
     font: bold var(--font-super-bigger) var(--title-fonts);
     margin: 1.5em 0;

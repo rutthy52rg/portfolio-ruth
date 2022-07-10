@@ -408,7 +408,7 @@ a.main__projects_carousel_dots-list_item {
 /* ===============
    RESPONSIVE
    =============== */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 678px) {
   header h1 {
     font: bolder var(--font-super-bigger) var(--title-fonts);
   }
