@@ -10,17 +10,16 @@
 *Las fuentes se han integrado en línea
 
 
-
-├───app
-│   ├───css
-│       ├───main.css
-│       ├───home.css
-│       └───our-projects.css
-│   └───images
-│       ├───iconos
-│   └───videos
-│   ├───our-projects.html
-│   └───index.html
-├───Readme.md
-├───.gitignore
-└───
+|------app
+|------|-----css
+|      	      |---main.css
+|             |---home.css
+|	      |---our-projects.css
+|      |----img
+|            |---iconos
+|      |----videos
+|      |----home.html
+|      |----our-projects.html
+|      |----Readme.md
+|      |----.gitignore
+|_
