@@ -3,33 +3,31 @@
 /* ===============
    PROJECTS NAV
    =============== */
-   header{
-   background-color: var(--th8-purple-dark-color);
-   width: 100vw;
-   height: 80px;
-   box-sizing: border-box;
-   padding: 5%;
-   display: flex;
-   justify-content: space-between ;
-   align-items: center;
-   color: var(--th8-pink-extra-light-color);
-   font: var(--font-smaller) var(--content-fonts);
-
-   }
-   header a::after{
-   content: "\140A";
-   color: var(--th8-pink-extra-light-color);
-   font-size: var(--font-medium-small);
-
-   }
+header {
+  background-color: var(--th8-purple-dark-color);
+  width: 100vw;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  font: var(--font-smaller) var(--content-fonts);
+}
+header a::after {
+  content: "\140A";
+  color: var(--th8-pink-extra-light-color);
+  font-size: var(--font-medium-small);
+}
 
 /* ===============
    VIDEO
    =============== */
-   section.main__video{
-margin-top: 80px;
-      width: 100vw;
-   }
+section.main__video {
+  margin-top: 80px;
+  width: 100vw;
+}
 
 /* ===============
    GRID PROJECTS

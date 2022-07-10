@@ -151,11 +151,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 /* ===============
    GENERAL
    =============== */
 
+/* ======== sections & contains ========= */
 body {
   background-color: var(--th8-grey-color);
   display: flex;
@@ -167,13 +167,13 @@ section[class^="main__"] {
   margin: 5% auto 0;
   box-sizing: border-box;
 }
+/* ======== decorates ========= */
 hr.line-separator {
   width: 50%;
   border: 2px solid var(--th8-pink-extra-light-color);
 }
-.btn {
-  padding: 20px;
-}
+
+/* ======== titles ========= */
 h2[class$="_title"] {
   font: var(--font-medium) var(--title-fonts);
   text-align: center;
@@ -191,7 +191,7 @@ h2[class$="_title"]:after {
   bottom: 0;
   z-index: -1;
 }
-/* ======== inputs ========= */
+/* ======== forms-inputs-buttons ========= */
 input,
 textarea {
   all: unset;
@@ -261,6 +261,9 @@ input[type="radio"]:after {
   background-color: var(--th8-purple-medium-color);
 }
 
+.btn {
+  padding: 20px;
+}
 /* ===============
    HEADER
    =============== */
@@ -281,10 +284,6 @@ header {
 }
 
 /* ===============
-   MAIN
-   =============== */
-
-/* ===============
    FOOTER
    =============== */
 
@@ -292,17 +291,19 @@ header {
   margin-top: auto;
   background-color: var(--th8-purple-dark-color);
   color: var(--white);
-  height: 10vh;
+  height: 5vh;
+  min-height: 5vh;
   width: 100vw;
+  padding: 10px 0;
 }
-.footer__nav_list{
+.footer__nav_list {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
 }
-.footer__nav_list_item img{
+.footer__nav_list_item img {
   width: auto;
   height: 30px;
   filter: invert(1);
