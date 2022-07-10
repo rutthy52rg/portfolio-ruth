@@ -213,6 +213,9 @@ input:not([type="radio"]),
 textarea {
   border-bottom: 3px solid var(--th8-purple-medium-color);
 }
+textarea {
+  resize: both;
+}
 label,
 input,
 textarea,
@@ -319,16 +322,34 @@ header {
 /* ===============
    RESPONSIVE -MEDIAS QUERIES
    =============== */
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 768px) {
+  /* =============== sections =============== */
   section[class^="main__"] {
     width: 80vw;
     margin: 5% auto;
   }
+  /* =============== titulos =============== */
   h2[class$="_title"] {
     font: bold var(--font-super-bigger) var(--title-fonts);
   }
-  .btn:hover{
+  /* =============== inputs, buttons, forms =============== */
+  .btn:hover {
     background-color: var(--th8-pink-dark-color);
     color: var(--white);
+  }
+  label,
+  input:not([type="radio"]),
+  textarea,
+  input::placeholder,
+  textarea::placeholder {
+    font: var(--font-small) var(--content-fonts);
+    padding-top: 1em;
+  }
+
+  .form-control {
+    font: var(--font-small) var(--content-fonts);
+  }
+  .form-control + .form-control {
+    margin-top: 0;
   }
 }

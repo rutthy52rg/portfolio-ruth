@@ -145,9 +145,6 @@ li:nth-child(2) {
    =============== */
 section.main__slider {
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   max-height: 100vh;
   width: 100vw;
   margin-top: 0;
@@ -315,6 +312,13 @@ a.main__projects_carousel_dots-list_item {
   z-index: -1;
   font: var(--font-super-smaller) var(--content-fonts);
 }
+.main__skills_list_item p:before {
+  height: 70px;
+  bottom: 150%;
+  left: 30%;
+  animation: js 2s linear 1;
+  z-index: 3;
+}
 
 .main__skills_list_item p.git:after {
   height: 80px;
@@ -334,17 +338,12 @@ a.main__projects_carousel_dots-list_item {
   animation: css 2s linear 1;
 }
 
-.main__skills_list_item p.js:after{
+.main__skills_list_item p.js:after {
   height: 70px;
   background-color: var(--th8-pink-medium-color);
   animation: js 2s linear 1;
 }
-.main__skills_list_item p:before {
-  height: 70px;
-  bottom: 100%;
-  left: 20%;
-  animation: js 2s linear 1;
-}
+
 .main__skills_list_item p.git:before {
   content: "30%";
 }
@@ -425,11 +424,13 @@ a.main__projects_carousel_dots-list_item {
 /* ===============
    RESPONSIVE
    =============== */
-@media screen and (min-width: 678px) {
+
+@media screen and (min-width:768px) {
   /* =============== HEADER =============== */
   header h1 {
     font: bolder var(--font-super-bigger) var(--title-fonts);
   }
+
   /* =============== NAV =============== */
   .header-nav_avatar img {
     width: 250px;
@@ -445,9 +446,10 @@ a.main__projects_carousel_dots-list_item {
   .header-nav__menu-icon + ul > li a:hover {
     color: var(--th8-orange-color);
   }
+
   /* =============== SLIDER =============== */
   section.main__slider {
-    height: 75vh;
+    min-height: 600px;
   }
 
   .main__slider_contact-form .btn:hover::after {
@@ -455,6 +457,7 @@ a.main__projects_carousel_dots-list_item {
     transition: padding-right 0.2s linear;
     content: "\2709 contact width us";
   }
+
   /* =============== CAROUSEL =============== */
   .main__projects_carousel_list,
   .main__projects_carousel:after {
@@ -473,7 +476,8 @@ a.main__projects_carousel_dots-list_item {
   .main__projects_carousel_list_item p.figure-horizontal {
     font: var(--font-big) / 0.5em var(--content-fonts);
   }
- /* =============== SKILLS =============== */
+
+  /* =============== SKILLS =============== */
   .main__skills_list_item {
     width: 20%;
     height: 300px;
@@ -481,14 +485,27 @@ a.main__projects_carousel_dots-list_item {
   .main__skills_list_item p:after {
     width: 50px;
     right: 10px;
-
   }
   .main__skills_list_item p:before {
     width: 50px;
-    font: var(--font-medium-small) var(--content-fonts);
+    font: var(--font-small) var(--content-fonts);
     right: 10px;
     padding: 1% 0 21% 5%;
   }
 
   /* =============== FORM =============== */
+
+  .main__contact-form form div:nth-child(1),
+  .main__contact-form form div:nth-child(2),
+  .main__contact-form form div:nth-child(3),
+  .main__contact-form form div:nth-child(4) {
+    width: calc(85% / 4);
+  }
+  .main__contact-form form div:nth-child(6) {
+    width: max-content;
+  }
+  .main__contact-form form .main__contact-form_text {
+    font: var(--font-small) var(--content-fonts);
+  }
+
 }
