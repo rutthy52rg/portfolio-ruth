@@ -155,13 +155,12 @@ section.main__slider {
 .main__slider img {
   width: 100%;
 }
-.main__slider_contact-form{
+.main__slider_contact-form {
   position: fixed;
   z-index: 1;
 }
 .main__slider_contact-form .btn {
   padding: 0;
-
 }
 .main__slider_contact-form .btn::after {
   content: "\2709";

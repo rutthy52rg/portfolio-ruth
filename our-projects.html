@@ -15,21 +15,29 @@
   </head>
   <header>
     <a href="/index.html"></a>
-    <h1>Our projects</h1>
+    <h2>Our projects</h2>
   </header>
   <main class="main">
     <section class="main__video">
-      <iframe
-        width="100%"
-        src="https://www.youtube.com/embed/FoQGmKzHxGE?start=11"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <!--       <div class="video_iframe-content">
+        <iframe
+          class="responsive-iframe"
+          width="100%"
+          src="https://www.youtube.com/embed/FoQGmKzHxGE?autoplay=0&mute=1&controls=0"
+          title="wincarte"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div> -->
+      <video width="100vw" height="auto" autoplay muted>
+        <source src="video/our-projects.mp4" type="video/mp4" />
+        <source src="video/our-projects.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
     </section>
     <section class="main__projects-grid">
-      <h2 clas="main__projects-grid_title">Our projects</h2>
+      <h2 class="main__projects-grid_title">Our projects</h2>
       <div>
         <article class="main__projects-grid_item">
           <figcaption>
@@ -59,7 +67,6 @@
       </div>
     </section>
   </main>
-
   <footer class="footer">
     <ul class="footer__nav_list">
       <li class="footer__nav_list_item">
