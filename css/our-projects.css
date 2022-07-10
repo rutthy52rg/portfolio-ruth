@@ -60,7 +60,7 @@ section.main__video video {
    GRID PROJECTS
    =============== */
 .main__projects-grid_list {
-  width: calc(100vw - 9vw);
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-gap: 10px;
@@ -88,7 +88,7 @@ section.main__video video {
    HEADER
    =============== */
 
-   
+
   /* ===============
    VIDEO
    =============== */
@@ -100,6 +100,23 @@ section.main__video video {
   /* ===============
    GRID PROJECTS
    =============== */
+.main__projects-grid_list {
+  grid-template-columns: repeat(5, auto);
+}
+
+.main__projects-grid_list_item {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.main__projects-grid_list_item img {
+  width: 100%;
+}
+.main__projects-grid_list_item figcaption {
+    color: var(--th8-purple-dark-color);
+    font: bold var(--font-smaller) var(--content-fonts);
+    text-align: center;
+}
   .main__projects-grid_list_item figcaption {
     background-color: #d6163d9c;
     position: absolute;

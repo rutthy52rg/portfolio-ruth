@@ -388,6 +388,9 @@ a.main__projects_carousel_dots-list_item {
   align-items: flex-end;
   margin-top: 3rem;
 }
+.main__contact-form form .main__contact-form_text{
+  margin-bottom: 1em ;
+}
 
 .main__contact-form form > div:not(.radio-input) {
   margin: 0 20px 40px 0;

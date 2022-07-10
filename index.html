@@ -139,7 +139,7 @@
       </section>
       <section class="main__contact-form" id="contact">
         <h2 class="main__contact-form_title">contact form</h2>
-        <form action="/register">
+        <form action="/index.html" method="POST">
           <div>
             <label for="name"></label>
             <input
@@ -180,48 +180,28 @@
               required
             />
           </div>
-          <div>
-            <div class="radio-input">
-              <label for="Universidad">Universidad </label>
-              <input
-                type="radio"
-                name="known"
-                id="Universidad"
-                value="Universidad"
-              />
-              <i></i>
-            </div>
-            <div class="radio-input">
-              <label for="event">Keepcoding</label>
-              <input
-                type="radio"
-                name="known"
-                id="Keepcoding"
-                value="Keepcoding"
-              />
-              <i></i>
-            </div>
-            <div class="radio-input">
-              <label for="known">Colegio</label>
-              <input
-                type="radio"
-                name="known"
-                id="Colegio"
-                value="Colegio"
-              /><i></i>
-            </div>
-            <div class="radio-input">
-              <label for="message">En Github</label>
-              <input type="radio" name="known" id="Github" value="Github" />
-              <i></i>
-            </div>
+          <div class="main__contact-form_radio-group">
+            <p class="main__contact-form_text">¿Cómo me conociste?</p>
+            <label class="form-control">
+              <input type="radio" name="known" value="universidad" required />
+              Universidad
+            </label>
+            <label class="form-control">
+              <input type="radio" name="known" value="kick-off" /> Keepcoding
+              kick-off
+            </label>
+            <label class="form-control">
+              <input type="radio" name="known" value="colegio" /> Colegio
+            </label>
+            <label class="form-control">
+              <input type="radio" name="known" value="github" /> En Github
+            </label>
           </div>
           <div>
             <label for="twitter"></label>
             <input
               type="text"
               name="gittag"
-              id="gittag"
               pattern="^@[^\s]+"
               required
               placeholder="GitHub Tag"
@@ -231,7 +211,6 @@
             <label for="description"></label>
             <textarea
               name="description"
-              id="description"
               maxlength="180"
               required
               placeholder="Description"
