@@ -304,7 +304,8 @@ a.main__projects_carousel_dots-list_item {
   font: var(--font-small) / 2em var(--content-fonts);
   text-align: left;
 }
-.main__skills_list_item p:after {
+.main__skills_list_item p:after,
+.main__skills_list_item p:before {
   content: "";
   width: 20px;
   right: 10px;
@@ -316,33 +317,46 @@ a.main__projects_carousel_dots-list_item {
 }
 
 .main__skills_list_item p.git:after {
-  content: "30%";
   height: 80px;
   background-color: var(--th8-pink-medium-color);
   animation: git 2s linear 1;
 }
 
 .main__skills_list_item p.html:after {
-  content: "85%";
   height: 185px;
   background-color: var(--th8-orange-color);
   animation: html 2s linear 1;
 }
 
 .main__skills_list_item p.css:after {
-  content: "75%";
   height: 170px;
   background-color: var(--th8-orange-color);
   animation: css 2s linear 1;
 }
 
-.main__skills_list_item p.js:after {
-  content: "20%";
+.main__skills_list_item p.js:after{
   height: 70px;
   background-color: var(--th8-pink-medium-color);
   animation: js 2s linear 1;
 }
-
+.main__skills_list_item p:before {
+  height: 70px;
+  bottom: 100%;
+  left: 20%;
+  animation: js 2s linear 1;
+}
+.main__skills_list_item p.git:before {
+  content: "30%";
+}
+.main__skills_list_item p.html:before {
+  content: "80%";
+}
+.main__skills_list_item p.css:before {
+  content: "70%";
+}
+.main__skills_list_item p.js:before {
+  content: "20%";
+}
 @keyframes git {
   0% {
     height: 0;
@@ -388,8 +402,8 @@ a.main__projects_carousel_dots-list_item {
   align-items: flex-end;
   margin-top: 3rem;
 }
-.main__contact-form form .main__contact-form_text{
-  margin-bottom: 1em ;
+.main__contact-form form .main__contact-form_text {
+  margin-bottom: 2em;
 }
 
 .main__contact-form form > div:not(.radio-input) {
@@ -412,9 +426,11 @@ a.main__projects_carousel_dots-list_item {
    RESPONSIVE
    =============== */
 @media screen and (min-width: 678px) {
+  /* =============== HEADER =============== */
   header h1 {
     font: bolder var(--font-super-bigger) var(--title-fonts);
   }
+  /* =============== NAV =============== */
   .header-nav_avatar img {
     width: 250px;
     height: auto;
@@ -424,17 +440,55 @@ a.main__projects_carousel_dots-list_item {
   }
 
   .header-nav__menu-icon + ul > li {
-    font: lighter var(--font-big) var(--content-fonts);
+    font: lighter var(--font-medium-small) var(--content-fonts);
   }
   .header-nav__menu-icon + ul > li a:hover {
-    color: var(--th8-terciary-color);
+    color: var(--th8-orange-color);
   }
+  /* =============== SLIDER =============== */
+  section.main__slider {
+    height: 75vh;
+  }
+
   .main__slider_contact-form .btn:hover::after {
     padding-right: 200px;
     transition: padding-right 0.2s linear;
     content: "\2709 contact width us";
   }
+  /* =============== CAROUSEL =============== */
+  .main__projects_carousel_list,
+  .main__projects_carousel:after {
+    height: 50vh;
+  }
   .main__projects_carousel_list_item figcaption {
     font: bolder var(--font-bigger) var(--content-fonts);
   }
+  a.main__projects_carousel_dots-list_item {
+    width: 50px;
+    height: 50px;
+  }
+  .main__projects_carousel_list_item p.figure-vertical {
+    font: var(--font-big) / 0.5em var(--content-fonts);
+  }
+  .main__projects_carousel_list_item p.figure-horizontal {
+    font: var(--font-big) / 0.5em var(--content-fonts);
+  }
+ /* =============== SKILLS =============== */
+  .main__skills_list_item {
+    width: 20%;
+    height: 300px;
+  }
+  .main__skills_list_item p:after {
+    width: 50px;
+    right: 10px;
+
+  }
+  .main__skills_list_item p:before {
+    width: 50px;
+    font: var(--font-medium-small) var(--content-fonts);
+    right: 10px;
+    padding: 1% 0 21% 5%;
+  }
+
+  /* =============== FORM =============== */
 }
